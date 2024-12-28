@@ -1,0 +1,20 @@
+<sly data-sly-use.provider="et.com.aem.core.models.ProviderModel">
+  <ul>
+    <sly data-sly-list.products="${provider.products}">
+        <li>
+            <strong>ID:</strong> ${products.id} <br>
+            <strong>Name:</strong> ${products.name} <br>
+            <sly data-sly-test="${products.data}">
+                <strong>Data:</strong> <br>
+                <sly>
+                    <span>Color: ${products.data.color}</span><br>
+                    <span>Capacity: ${products.data.capacity}</span><br>
+                    <span>Price: ${products.data.price}</span><br>
+                    <span>Year: ${products.data.year}</span><br>
+                    <span>CPU Model: ${products.data.cpuModel}</span><br>
+                </sly>
+            </sly>
+        </li>
+    </sly>
+</ul>
+</sly>
